@@ -1,51 +1,32 @@
 <html>
-
-<head>
-    <script src="jquery.min.js"></script>
-    <script src="edit.js"></script>
-</head>
-
-<body>
-    <h3>Edit by ID</h3>
-    <div>
-        <a href="main.html" target="#">Home</a>
+    <head>
+        <script src="jquery.min.js"></script>
+        <script src="edit.js"></script>
+    </head>
+    <body>
+        <h3>Update Data</h3>
+        <hr>
+        <div>
+        <a href="main.html" target="#">Home</a><br>
     </div>
     <br>
     <table>
-        <form id="inputid">
-            <table>
-                <tr>
-                    <td>
-                        ID:
-                    </td>
-                    <td>
-                        <input type="text" value=""></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        NAMA:
-                    </td>
-                    <td>
-                        <input type="text" value=""></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        NIM:
-                    </td>
-                    <td>
-                        <input type="text" value=""></input>
-                    </td>
-                </tr>
-
-            </table>
-        </form>
+        <tr><td>ID</td>
+            <td><form><input type='text' id='id' value=''></input></form></td>
+            <td><button onclick="findforupdate()">Find</button></td>
+    </tr>
     </table>
     <br>
-    <button onclick='createdata()'>CREATE</button>
-    <br><br>
+    <table>
+    <form id='inputid'>
+            <tr><td>ID: </td><td><input type='text' id='nid' value=''></input></td>
+            <tr><td>Nama: </td><td><input type='text' id='nname' value=''></input></td>
+            <tr><td>NIM: </td><td><input type='text' id='nnim' value=''></input></td>
+            </form>
+            <tr><td></td><td><button onclick="updatedata()">Update</button></td>
+        </table>
+        
+    <br>
     <div id="data"></div>
-</body>
-
+    </body>
 </html>
